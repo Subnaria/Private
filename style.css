@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #b3d9ff; /* Bleu pastel */
+    color: #1a1a1a; /* Noir profond */
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    margin-top: 100px;
+}
+
+/* Titre */
+h1 {
+    color: #1a1a1a; /* Noir */
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* Message */
+p {
+    font-size: 22px;
+    color: #333;
+    margin: 20px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Effet d'animation pour le message */
+.message-anim {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Bouton stylé */
+button {
+    background-color: #1a1a1a; /* Noir */
+    color: #b3d9ff; /* Texte bleu pastel */
+    border: 2px solid #1a1a1a;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+button:hover {
+    background-color: #333; /* Noir un peu plus clair */
+    transform: scale(1.1);
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+/* Compte à rebours stylé */
+#countdown {
+    font-size: 18px;
+    color: #1a1a1a;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Animation d'Idle améliorée (plus rapide et plus fluide) */
+@keyframes idleAnimation {
+    0% { background-image: url('Contents/Static/Idle_1.png'); }
+    20% { background-image: url('Contents/Static/Idle_2.png'); }
+    40% { background-image: url('Contents/Static/Idle_3.png'); }
+    60% { background-image: url('Contents/Static/Idle_4.png'); }
+    80% { background-image: url('Contents/Static/Idle_5.png'); }
+    100% { background-image: url('Contents/Static/Idle_1.png'); }
+}
+
+/* Animation de marche améliorée */
+@keyframes walkAnimation {
+    0% { background-image: url('Contents/marche/Walk_1.png'); }
+    12.5% { background-image: url('Contents/marche/Walk_2.png'); }
+    25% { background-image: url('Contents/marche/Walk_3.png'); }
+    37.5% { background-image: url('Contents/marche/Walk_4.png'); }
+    50% { background-image: url('Contents/marche/Walk_5.png'); }
+    62.5% { background-image: url('Contents/marche/Walk_6.png'); }
+    75% { background-image: url('Contents/marche/Walk_7.png'); }
+    87.5% { background-image: url('Contents/marche/Walk_8.png'); }
+    100% { background-image: url('Contents/marche/Walk_1.png'); }
+}
+
+/* Style du chien */
+#dog {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    left: 50%;
+    top: 85%;
+    transform: translateX(-50%);
+    animation: idleAnimation 0.8s steps(5) infinite; /* Animation Idle améliorée */
+}
+
+#love-message {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, top 0.3s ease-in-out; /* Transition plus fluide pour l'opacité et la position */
+}
+
+/* Style du Menu */
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Style du bouton "Retour à la page principale" */
+#startButton {
+    background-color: #1a1a1a;
+    color: #b3d9ff;
+    border: 2px solid #1a1a1a;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+#startButton:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+#startButton:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+/* Style du bouton "Menu" */
+#menuButton {
+    background-color: #1a1a1a;
+    color: #b3d9ff;
+    border: 2px solid #1a1a1a;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+#menuButton:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+/* Style du reste du contenu de la page principale */
+#mainContent {
+    display: block;
+    text-align: center;
+}
+
+#firstDayCount, #anniversaryCount {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+

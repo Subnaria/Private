@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Message d'amour quotidien</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Contenu principal -->
+    <div class="container" id="mainContent">
+        <h1>💌 Un message pour toi</h1>
+        <p id="message">Clique sur le bouton pour recevoir ton message du jour !</p>
+        <button id="loveButton" onclick="nouveauMessage()">💖 Découvre ton message du jour ! </button>
+        <p id="countdown"></p>
+    </div>
+
+    <!-- Chien et message -->
+    <div id="dog"></div>
+    <div id="love-message">Je suis là mon 💖</div>
+
+    <!-- Menu -->
+    <div id="menu" style="display: none;">
+        <h2>Menu</h2>
+        <button onclick="startPage()">Retour💖</button>
+        <p id="firstDayCountdown"></p>
+        <p id="anniversaryCountdown"></p>
+    </div>
+
+    <!-- Bouton pour ouvrir le menu -->
+    <button id="menuButton" onclick="showMenu()">Voir Menu💖</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
